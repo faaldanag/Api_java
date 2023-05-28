@@ -1,6 +1,5 @@
 package com.example.reto3.Service;
 
-import com.example.reto3.Model.Car;
 import com.example.reto3.Model.Gama;
 import com.example.reto3.Repository.GamaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,9 +43,6 @@ public class GamaService {
                 }
                 if (gama.getName() !=null) {
                     gamaEncontrado.get().setName(gama.getName());
-                }
-                if (gama.getDescription()!=null) {
-                    gamaEncontrado.get().setDescription(gama.getDescription());
                 }
                 return gamaRepository.save(gamaEncontrado.get());
             }else{

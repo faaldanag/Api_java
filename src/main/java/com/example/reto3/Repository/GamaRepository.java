@@ -1,6 +1,5 @@
 package com.example.reto3.Repository;
 
-import com.example.reto3.Model.Client;
 import com.example.reto3.Model.Gama;
 import com.example.reto3.Repository.CRUD.GamaCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +24,8 @@ public class GamaRepository {
     }
     public void delete(Gama gama){
         gamaCrudRepository.delete(gama);
+    }
+    public Gama update(Gama gama){
+       return gamaCrudRepository.save(gama);
     }
 }

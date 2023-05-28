@@ -41,7 +41,10 @@ public class ClientService {
             Optional<Client> clientEncontrado = getClient(client.getIdClient());
             if (clientEncontrado.isPresent()) {
                 if (client.getEmail() != null) {
-                    clientEncontrado.get().setName(client.getEmail());
+                    clientEncontrado.get().setEmail(client.getEmail());
+                }
+                if (client.getPassword() !=null) {
+                    clientEncontrado.get().setPassword(client.getPassword());
                 }
                 if (client.getName()!=null){
                     clientEncontrado.get().setName(client.getName());
@@ -49,9 +52,7 @@ public class ClientService {
                 if (client.getAge() !=null) {
                     clientEncontrado.get().setAge(client.getAge());
                 }
-                if (client.getPassword() !=null) {
-                    clientEncontrado.get().setPassword(client.getPassword());
-                }
+
                 return clientRepository.save(clientEncontrado.get());
             }else{
                 return client;

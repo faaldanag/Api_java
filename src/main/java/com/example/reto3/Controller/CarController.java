@@ -4,7 +4,6 @@ import com.example.reto3.Model.Car;
 import com.example.reto3.Service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,5 +31,18 @@ public class CarController {
     public Car save (@RequestBody Car car){
         return carService.save(car);
     }
+
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Car update (@RequestBody Car car){
+        return carService.update(car);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete (@PathVariable int id){
+        return carService.deleteCar(id);
+    }
+
 
 }

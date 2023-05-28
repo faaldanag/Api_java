@@ -1,9 +1,8 @@
 package com.example.reto3.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
-import org.hibernate.boot.model.relational.internal.SqlStringGenerationContextImpl;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -12,7 +11,7 @@ public class Gama {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idGama;
-    private  String name;
+    private String name;
     private String description;
 
     //Carros

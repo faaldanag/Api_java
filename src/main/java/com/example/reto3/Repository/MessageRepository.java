@@ -1,6 +1,5 @@
 package com.example.reto3.Repository;
 
-import com.example.reto3.Model.Gama;
 import com.example.reto3.Model.Message;
 import com.example.reto3.Repository.CRUD.MessageCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
